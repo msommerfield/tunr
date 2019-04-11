@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
-import ArtistList from "./components/ArtistList";
-import Artist from "./components/Artist";
+import ArtistList from "./Components/ArtistList";
+import Artist from "./Components/Artist";
 import "./App.css";
 
 class App extends Component {
