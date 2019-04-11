@@ -14,7 +14,7 @@ class ArtistList extends Component {
 
     fetchArtists = async () => {
         try {
-            const res = await axios.get('/api/artists');
+            const res = await axios.get('/api/v1/artists');
             this.setState({artists: res.data});
         }
         catch (err) {
@@ -32,7 +32,7 @@ class ArtistList extends Component {
                 <h1>All Artists</h1>
                 {this.state.artists.map(artist => (
                     <div key={artist.id}>
-                        <Link to={`/artist/${artist.id}`} >{artist.name}</Link>
+                        <Link to={`/artists/${artist.id}`} >{artist.name}</Link>
                     </div>
                 ))}
             </div>

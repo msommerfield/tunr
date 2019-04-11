@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 
 class Artist extends Component {
@@ -11,11 +11,12 @@ class Artist extends Component {
     componentDidMount() {
         const artistId = this.props.match.params.id;
         this.fetchArtist(artistId)
+        console.log("mounted")
     }
 
     fetchArtist = async (artistId) => {
         try {
-            const artistResponse = await axios.get(`/api/artists/${artistId}/`)
+            const artistResponse = await axios.get(`/api/v1/artists/${artistId}/`)
             this.setState({
                 artist: artistResponse.data,
                 songs: artistResponse.data.songs,
