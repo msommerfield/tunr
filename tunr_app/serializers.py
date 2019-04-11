@@ -6,7 +6,6 @@ class SongSerializer(serializers.ModelSerializer):
         model = Song
         fields =('id', 'title', 'album', 'preview_url', 'artist')
 
-
 class ArtistSerializer(serializers.ModelSerializer):
     songs = SongSerializer(many=True, read_only=True)
     class Meta:
